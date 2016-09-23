@@ -1,0 +1,12 @@
+<div class="row" ng-controller="AppController">
+    <div class="larger-12 medium-12 small-12 columns">
+        <header>
+            <nav id="nav">
+                <ul>
+                        <li ng-repeat="navEng in nav.navEng"><a href="{{ navEng.url }}">{{ navEng.item }}</a></li>
+                </ul>
+            </nav>
+            <div class="language-slct"><a href="/en/"  class="active">English</a> | <a href="/">Spanish</a></div>
+        </header>
+    </div>
+</div>

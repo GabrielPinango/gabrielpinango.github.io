@@ -1,0 +1,15 @@
+<div ng-controller="HomeController" id='home' class="">
+    <app-header></app-header>
+    <div class="row">
+        <div class="large-4 medium-4 small-4 small-centered columns profile" id="profile"></div>
+        <div class="large-12 medium-12 small-12 title columns disabled-text">
+            <h2 ng-bind-html="myname">{{myname}}</h2>
+            <h1>{{ home.homeSpa.title }}</h1>
+        </div>
+        <div class="large-12 medium-12 small-12 content columns disabled-text">            
+            <!--<blockquote class="not-inline" ng-bind-html="home.homeSpa.content"></blockquote> -->
+            <div id="col" ng-bind-html="home.homeSpa.content"></div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,328 @@
+* {
+    transition: all 0.5s;
+}
+
+html, body, .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    color: #fff;
+    overflow: hidden;
+}
+
+.page {
+    overflow-y: scroll !important;
+}
+
+* {
+    font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+}
+
+.page {
+    position: absolute;
+}
+
+#p1 {
+    left: 0;
+}
+
+#p2, #p3, #p4, #p5, #p6 {
+    left: 200%; /* HIDE SECTIONS */
+}
+
+#p1 {
+    background: #485563;
+    background: -webkit-linear-gradient(to left, #485563 , #29323c);
+    background: linear-gradient(to left, #485563 , #29323c);
+}
+
+#p2 {
+    background: #000000;
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+}
+
+#p3 {
+    background: gold;
+}
+
+#p4 {
+    background: deeppink;
+}
+
+#p5 {
+    background: rebeccapurple;
+}
+#p6 {
+    background: aquamarine;
+}
+
+#t2:target #p2, #t3:target #p3, #t4:target #p4, #t5:target #p5, #t6:target #p6 {
+    transform: translateX(-191%); /* SHOW SECTIONS */
+    -webkit-transform: translateX(-191%);
+    -moz-transform: translateX(-191%);
+    -o-transform: translateX(-191%);
+    transition-delay: .4s !important;
+    -webkit-transition-delay: .4s !important;
+    -moz-transition-delay: .4s !important;
+    -o-transition-delay: .4s !important;
+}
+
+#t2:target #p1, #t3:target #p1, #t4:target #p1, #t5:target #p1, #t6:target #p1 {
+    background: #000;
+    background: -webkit-linear-gradient(to left, #000 , #00000c);
+    background: linear-gradient(to left, #000 , #00000c);
+}
+
+#t2:target #p1 .section, #t3:target #p1 .section, #t4:target #p1 .section, #t5:target #p1 .section, #t6:target #p1 .section {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+}
+
+.icon {
+  color: #fff;
+  font-size: 32px !important;
+  display: block !important;
+}
+
+ul .icon:hover {
+    opacity: 0.5;
+}
+
+#t2:target ul .icon, #t3:target ul .icon, #t4:target ul .icon, #t5:target ul .icon, #t6:target ul .icon { /* DEFAULT ICONS SCALE TO 0.6 */
+    transform: scale(.6);
+   -webkit-transform: scale(.6);
+    -moz-transform: scale(.6);
+    -o-transform: scale(.6);
+    transition-delay: .25s;
+    -webkit-transition-delay: .25s;
+    -moz-transition-delay: .25s;
+    -o-transition-delay: .25s;
+}
+
+#t2:target #second, #t3:target #third, #t4:target #fourth, #t5:target #fifth, #t6:target #sixth { /* WHEN CLICKED ON AN ICON IT'LL SCALE TO 1.2 */
+    transform: scale(1.2) !important;
+    -webkit-transform: scale(1.2) !important;
+    -moz-transform: scale(1.2) !important;
+    -o-transform: scale(1.2) !important;
+    animation: shine-loading 2s infinite ease-in;
+    -webkit-animation: shine-loading 2s infinite ease-in;
+    -moz-animation: shine-loading 2s infinite ease-in;
+    -o-animation: shine-loading 2s infinite ease-in;
+}
+
+ul {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 50%;
+    width: 10%;
+    padding: 0;
+    text-align: center;
+}
+
+#menu .icon {
+    margin: 30px 0;
+    transition: all .5s ease-out !important;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page .section {
+    position: absolute; /* <-- Remove this  */
+    top: 0;
+    bottom: 0;
+    right: 10%;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateX(360%);
+    -webkit-transform: translateX(360%);
+    -moz-transform: translateX(360%);
+    -o-transform: translateX(360%);
+    transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -webkit-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -moz-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .section {
+    transform: translateX(10%) !important;
+}
+
+#t2:target .page#p2 .section, #t3:target .page#p3 .section, #t4:target .page#p4 .section, #t5:target .page#p5 .section, #t6:target .page#p6 .section {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -moz-transform: translateX(0) !important;
+    -o-transform: translateX(0) !important;
+    transition-delay: 1s;
+}
+
+/* CONTENT */
+.profile {
+    background: url(../img/profile.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.title h1 {
+    /*font-size: calc(2.5vw + 2.5vh + 1vmin);*/
+    font-size: 5em;
+    font-family: 'Poiret One', cursive;
+    font-weight: 500;
+}
+
+.title h2 {
+    /*font-size: calc(2vw + 2vh + 1vmin);*/
+    font-size: 4.6em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.home {
+    margin-top: 25vh;
+}
+
+@keyframes shine-loading {
+    0% {
+        color: #fff;
+    }
+    
+    50% {
+        color: #ccc;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    
+    100% {
+        color: #fff;
+    }
+}
+
+/* Large screen */
+@media only screen and (min-width: 64.063em) {
+    #col {
+        column-count:2;
+        -moz-column-count:2;
+        -webkit-column-count: 2;
+        column-gap: 20px;
+        -webkit-column-gap: 40px;
+    }
+    
+    .meter {
+        height: 20px;  /* Can be anything */
+        width: 40%;
+        position: relative;
+        margin: 6px 0 20px 0; /* Just for demo spacing */
+        background: #555;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        padding: 5px;
+        -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+        -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+        box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+    }
+
+    .meter > span {
+        display: block;
+        height: 10px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-radius-bottomright: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        -webkit-border-top-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+        -moz-border-top-left-radius: 20px;
+        -moz-border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: rgb(43,194,83);
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(43,194,83)),
+            color-stop(1, rgb(84,240,84))
+        );
+        background-image: -moz-linear-gradient(
+            center bottom,
+            rgb(43,194,83) 37%,
+            rgb(84,240,84) 69%
+        );
+        -webkit-box-shadow: 
+            inset 0 2px 9px  rgba(255,255,255,0.3),
+            inset 0 -2px 6px rgba(0,0,0,0.4);
+        -moz-box-shadow: 
+            inset 0 2px 9px  rgba(255,255,255,0.3),
+            inset 0 -2px 6px rgba(0,0,0,0.4);
+        box-shadow: 
+            inset 0 2px 9px  rgba(255,255,255,0.3),
+            inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+    }
+}
+/* Medium screen */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #col {
+        column-count:2;
+        -moz-column-count:2;
+        -webkit-column-count: 2;
+        column-gap: 20px;
+        -webkit-column-gap: 40px;
+    }
+}
+
+/* DELETE LATER */
+
+.greater, .underscore {
+    font-size: 2em;
+}
+
+#t4:target #p4 p, #t5:target #p5 p, #t6:target #p6 p {
+    font-family: "Courier";
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 9.4em;
+    animation: type 2s steps(40, end); 
+}
+
+#p4 span, #p5 span, #p6 span {
+  animation: blink 0.6s infinite ease-in;
+}
+
+@keyframes type{ 
+    from { width: 0; }
+}
+
+@keyframes blink{
+    0% {opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}

@@ -1,0 +1,27 @@
+<div ng-controller="EducationController" id="education">
+    <app-header></app-header>
+    <div class="row disabled-text">
+        <div class="large-12 medium-12 small-12 title columns">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="disabled-text education-section" ng-repeat="education in education">
+            <div class="large-6 medium-12 small-12 columns">
+                <div class="large-12 medium-12 small-12 box columns">
+                    <div class="large-12 medium-12 small-12 columns">
+                        <h2>{{ education.name }}</h2>
+                    </div>
+                    <hr>
+                    <div class="large-6 medium-6 small-12 small-centered experience-logo columns">
+                        <img src="{{ education.logo }}">
+                    </div>
+                    <div class="large-12 medium-12 small-12 columns educCharacteristic">
+                        <span class="date"><b>Nivel Educativo</b>: </span><span class="styled">{{ education.educationLevel }}</span>
+                        <br><span class="date"><b>Hasta:</b> </span><span class="styled">{{ education.to | date }}</span>
+                        <br><span class="date"><b>Hasta:</b> </span><span class="styled">{{ education.to | date }}</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <app-footer></app-footer>
+</div>

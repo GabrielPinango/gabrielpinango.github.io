@@ -1,0 +1,28 @@
+<div ng-controller="ContactController">
+    <app-header></app-header>
+       <!-- <form name="userForm" ng-submit="submitForm()">
+            <input type="text" id="name" ng-model="newUser.name">
+            <input type="text" id="email" ng-model="newUser.email">
+            <input type="submit" value="Submit">
+        </form> -->
+    <div class="row">
+        <div class="large-7 medium-7 small-centered small-12 columns contact-form title">
+            <h1>Contact Me</h1>
+            <div ng-bind-html="message.successEng"></div>
+            <form name="messageForm" ng-submit="submitForm()">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" ng-model="message.name">
+                    <label>email</label>
+                    <input type="email" name="email" class="form-control" ng-model="message.email">
+                    <label>Subject</label>
+                    <input type="text" name="subject" class="form-control" ng-model="message.subject">
+                    <label>Content</label>
+                    <textarea name="content" class="form-control" ng-model="message.content"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

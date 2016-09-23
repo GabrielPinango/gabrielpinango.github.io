@@ -1,0 +1,123 @@
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    font-family: 'Poiret One', cursive;
+    font-weight: 400;
+}
+
+.title h2 {
+    font-size: 2.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.home-box {
+    background-color: #eee;
+    box-shadow: 0 5px 10px #ccc;
+    margin-bottom: 5px;
+    z-index: 2;
+}
+
+#menu {
+    text-align: center;
+    padding: 5px;
+    width: 100;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    margin-left: 0 !important;
+    box-shadow: 0 5px 10px rgba(244,244,244,0.7);
+    /*position: absolute;
+    background: #eee;
+    z-index: 3;*/
+}
+
+#menu  .icon {
+    position: relative;
+    margin-top: 5px;
+    /*margin-bottom: 40px;*/
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+   /* display: block;*/
+    display: inline-block;
+    color: #000;
+}
+
+#menu .icon:hover, .icon:active {
+    opacity: 0.5;
+}
+
+#p3, #p4, #p5, #p6 {
+    display: none;
+}
+
+#t3:target #p3, #t4:target #p4, #t5:target #p5, #t6:target #p6 {
+    display: block;
+    animation: transition-bottom-top 0.8s 1 ease-in;
+    -webkit-animation: transition-bottom-top 0.8s 1 ease-in;
+    -moz-animation: transition-bottom-top 0.8s 1 ease-in;
+    -o-animation: transition-bottom-top 0.8s 1 ease-in;
+}
+
+#t3:target #p1 .section, #t4:target #p1 .section, #t5:target #p1 .section, #t6:target #p1 .section {
+    display: none;
+}
+
+#t3:target #p2 .section, #t4:target #p2 .section, #t5:target #p2 .section, #t6:target #p2 .section {
+    display: none;
+}
+
+@keyframes transition-bottom-top {
+    from {
+        -webkit-transform: translateX(-100.5%);
+    }
+    
+    to {
+        -webkit-transform: translateX(1%);
+    }
+}
+
+/* Medium screen */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #col {
+        column-count:2;
+        -moz-column-count:2;
+        -webkit-column-count: 2;
+        column-gap: 20px;
+        -webkit-column-gap: 40px;
+    }
+}
+
+/* DELETE LATER */
+
+.greater, .underscore {
+    font-size: 2em;
+}
+
+#t4:target #p4 p, #t5:target #p5 p, #t6:target #p6 p {
+    font-family: "Courier";
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 9.4em;
+    animation: type 2s steps(35, end); 
+}
+
+#p4 span, #p5 span, #p6 span {
+  animation: blink 0.6s infinite ease-in;
+}
+
+@keyframes type{ 
+    from { width: 0; }
+}
+
+@keyframes blink{
+    0% {opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
