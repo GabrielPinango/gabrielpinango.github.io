@@ -35,6 +35,11 @@ html, body, .page {
     left: 200%; /* HIDE SECTIONS */
 }
 
+.background{
+    background-image: url('../img/background.jpg');
+    filter: blur(5px) grayscale(50%);
+}
+
 #p1 {
     background: #485563;
     background: -webkit-linear-gradient(to left, #485563 , #29323c);
@@ -77,6 +82,10 @@ html, body, .page {
     background: #000;
     background: -webkit-linear-gradient(to left, #000 , #00000c);
     background: linear-gradient(to left, #000 , #00000c);
+    filter: blur(5px) brightness(50%);
+    -webkit-filter: blur(5px) brightness(50%);
+    -moz-filter: blur(10px) brightness(50%);
+    -o-filter: blur(10px) brightness(50%);
 }
 
 #t2:target #p1 .section, #t3:target #p1 .section, #t4:target #p1 .section, #t5:target #p1 .section, #t6:target #p1 .section {
@@ -188,6 +197,9 @@ a {
     position: relative;
     text-align: center;
 }
+
+#p1 h1 {background: rgba(0,0,0,0.2);}
+#p1 h2 {background: rgba(0,0,0,0.05);}
 
 .title h1 {
     /*font-size: calc(2.5vw + 2.5vh + 1vmin);*/
