@@ -15,10 +15,6 @@ html, body, .page {
     overflow: hidden;
 }
 
-.page {
-    overflow-y: scroll !important;
-}
-
 * {
     font-family: 'open sans', 'lato', 'helvetica', sans-serif;
 }
@@ -198,8 +194,7 @@ a {
     text-align: center;
 }
 
-#p1 h1 {background: rgba(0,0,0,0.2);}
-#p1 h2 {background: rgba(0,0,0,0.05);}
+#p1 h1,#p1 h2  {text-shadow: -2px 1px 6px #222;}
 
 .title h1 {
     /*font-size: calc(2.5vw + 2.5vh + 1vmin);*/
