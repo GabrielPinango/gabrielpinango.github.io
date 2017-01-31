@@ -58,6 +58,12 @@ app.controller('SkillController', ['$scope', function($scope) {
             experienceLevel: "Intermediate",
             experienceRate: "60%"
         },
+        githubSkill: {
+            skill: "Github",
+            logoName: "github.png",
+            experienceLevel: "Intermediate",
+            experienceRate: "60%"
+        },
         angularJSSkill: {
             skill: "AngularJS",
             logoName: "angular.png",
