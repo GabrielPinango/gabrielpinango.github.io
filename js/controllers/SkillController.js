@@ -52,6 +52,12 @@ app.controller('SkillController', ['$scope', function($scope) {
             experienceLevel: "Intermediate",
             experienceRate: "60%"
         },
+        bootstrapSkill: {
+            skill: "Bootstrap",
+            logoName: "bootstrap.png",
+            experienceLevel: "Intermediate",
+            experienceRate: "60%"
+        },
         angularJSSkill: {
             skill: "AngularJS",
             logoName: "angular.png",
@@ -67,51 +73,4 @@ app.controller('SkillController', ['$scope', function($scope) {
     };
     
     /* SPANISH */
-    $scope.expTitleEng= "Nivel de habilidad: ";
-    $scope.skillsSPA = {
-        rubyOnRails: {
-            skill: "Ruby On Rails",
-            logoName: "rails.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "60%"
-        },
-        html5Skill: {
-            skill: "HTML5",
-            logoName: "html.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "60%"
-            
-        },
-        css3Skill: {
-            skill: "CSS3",
-            logoName: "css.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "60%"
-        },
-        jsSkill: {
-            skill: "CSS3",
-            logoName: "js.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "70%"
-        },
-        foundationSkill: {
-            skill: "Zurb Foundation",
-            logoName: "zurb.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "60%"
-        },
-        angularJSSkill: {
-            skill: "AngularJS",
-            
-            logoName: "angular.png",
-            experienceLevel: "Beginner",
-            experienceRate: "20%"
-        },
-        linuxSkill: {
-            skill: "Linux",
-            logoName: "linux-logo.png",
-            experienceLevel: "Intermediate",
-            experienceRate: "60%"
-        }
-    };
 }]);

@@ -14,8 +14,8 @@
         <link rel="alternate" hreflang="es" href="https://gabrielpinangoresume.com.ve/" />
         <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="foundation-icons/foundation-icons/foundation-icons.css" />
-        <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 39.9375em)" />
-        <link rel="stylesheet" href="css/app.css" media="screen and (min-width:40.063em)" />
+        <link rel="stylesheet" href="css/small.css" media="screen and (max-width:64em)" />
+        <link rel="stylesheet" href="css/app.css" media="screen and (min-width:64.063em)" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
         <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -92,11 +92,11 @@
                                         <div class="content row">
                                             <div class="large-12 medium-12 small-12 columns title">
                                                 <h1>Skills</h1>
-                                                <div class="large-4 medium-12 small-12 columns" ng-class="isLast($last)" ng-repeat="skill in skills">
+                                                <div class="large-3 medium-12 small-12 columns" ng-class="isLast($last)" ng-repeat="skill in skills">
                                                     <h3>{{ skill.skill }}</h3>
                                                     <div class="bg-log" style="background-image:url('img/{{skill.logoName}}')"></div>
                                                     <p>{{ expTitle }}<b>{{ skill.experienceLevel }}</b>
-                                                    <div class="meter orange nostripes">
+                                                    <div class="meter orange nostripes" title="{{ skill.experienceRate }}">
                                                         <span style="width: {{ skill.experienceRate }}"></span>
                                                     </div>
                                                 </div>
