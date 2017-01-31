@@ -49,7 +49,9 @@ html, body, .page {
 }
 
 #p3 {
-    background: gold;
+    background: #16222A; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
 }
 
 #p4 {
@@ -242,7 +244,7 @@ a {
         height: 20px;  /* Can be anything */
         width: 40%;
         position: relative;
-        margin: 6px 0 20px 0; /* Just for demo spacing */
+        margin: 6px auto 20px auto; /* Just for demo spacing */
         background: #555;
         -moz-border-radius: 25px;
         -webkit-border-radius: 25px;
@@ -333,3 +335,6 @@ a {
     50%{opacity: 1;}
     100%{opacity: 0;}
 }
+
+/* SKILLS SECTION */
+.bg-log{width:100px;height:100px;background-color:#000;background-repeat: no-repeat;background-position: center;background-size: contain;border-radius: 50%;margin-left: auto;margin-right: auto;}
