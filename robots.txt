@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /views
+Disallow: /es
+
+Sitemap: https://gabrielpinangoresume.com.ve/sitemap.txt
