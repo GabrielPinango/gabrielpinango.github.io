@@ -337,4 +337,18 @@ a {
 }
 
 /* SKILLS SECTION */
-.bg-log{width:100px;height:100px;background-color:#000;background-repeat: no-repeat;background-position: center;background-size: contain;border-radius: 50%;margin-left: auto;margin-right: auto;}
+
+@media only screen and (min-width: 64.063em) {
+    .bg-log{width:100px;height:100px;background-color:#000;background-repeat: no-repeat;background-position: center;background-size: contain;border-radius: 50%;margin-left: auto;margin-right: auto;}
+    .skills-section h3{
+        font-size: 1rem;
+    }
+    .skills-section h1{
+        font-size: 4rem;
+    }
+}
+
+
+@media only screen and (max-height: 800px) {
+    .bg-log{width:80px;height:80px;}
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
